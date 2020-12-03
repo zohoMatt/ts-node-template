@@ -1,0 +1,17 @@
+# Node
+node_modules
+
+# Building
+dist
+.env
+
+# MacOS
+.DS_Store
+
+# Editors
+.idea
+.vscode
+
+# Logs
+log
+*.log

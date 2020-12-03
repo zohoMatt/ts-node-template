@@ -1,0 +1,53 @@
+{
+  "name": "game-store-bot",
+  "version": "0.1.0",
+  "description": "A extensible scraper bot to collect info from various game stores.",
+  "main": "src/main.ts",
+  "repository": "https://github.com/zohoMatt/game-store-bot.git",
+  "author": "zohoMatt <mattzuo12@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build-prod": "cp .env.prod .env && yarn build",
+    "build-test": "cp .env.test .env && yarn build",
+    "start": "node -r dotenv/config dist/main.js",
+    "lint": "eslint src",
+    "watch-node": "nodemon --exec \"yarn run lint && yarn start\"",
+    "dev": "concurrently \"tsc -w\" \"yarn run watch-node\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --config ./.prettierrc --write",
+      "eslint --ext=ts --fix src"
+    ]
+  },
+  "dependencies": {
+    "@sentry/node": "^5.28.0",
+    "dotenv": "^8.2.0",
+    "winston": "^3.3.3",
+    "winston-loggly-bulk": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/winston-loggly-bulk": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-watch": "^7.0.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "typescript-eslint-parser": "^22.0.0"
+  }
+}

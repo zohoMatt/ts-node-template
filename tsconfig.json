@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/src",
+    "strict": true,
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true         // https://stackoverflow.com/questions/42652423/error-default-is-not-a-constructor
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
