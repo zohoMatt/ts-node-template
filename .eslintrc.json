@@ -28,10 +28,12 @@
   "rules": {
     "arrow-body-style": ["error", "as-needed"],
     "class-methods-use-this": 1,
+    "comma-dangle": ["error", "never"],
     "func-names": 0,
     "no-continue": 0,
-    "no-prototype-builtins": 1,
     "no-inner-declarations": 0,
+    "no-prototype-builtins": 1,
+    "no-shadow": 0,
     "global-require": 0,
     "prefer-arrow-callback": ["error", { "allowNamedFunctions": false, "allowUnboundThis": false }],
     "import/prefer-default-export": 0,
@@ -53,9 +55,10 @@
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/member-delimiter-style": 0,
-    "@typescript-eslint/no-namespace": 0,
-    "@typescript-eslint/no-unused-vars": 0,
     "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-shadow": 1,
+    "@typescript-eslint/no-unused-vars": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/no-angle-bracket-type-assertion": 0
   }
